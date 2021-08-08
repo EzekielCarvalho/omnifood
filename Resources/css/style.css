@@ -1,0 +1,721 @@
+/* ------------------------------------*/
+/*BASIC SETUP*/
+/* ------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: white;
+    color: #313131;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ------------------------------------*/
+/*LINKS*/
+/* ------------------------------------*/
+
+a:link,
+a:visited{
+    color: #009432;
+    text-decoration: none;
+    border-bottom: 1px solid #009432;
+    -webkit-transition: border-bottom 0.5s, color 0.5s;
+    transition: border-bottom 0.5s, color 0.5s;
+}
+
+a:hover,
+a:active{
+    color: #313131;
+    border-bottom: 1px solid transparent;
+    
+}
+
+/* ------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/* ------------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.box {
+    padding: 1%;
+}
+
+section {
+    padding: 80px 0;
+}
+
+
+
+/* ------------------------------------*/
+/*HEADER*/
+/* ------------------------------------*/
+
+header {
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero-min.jpg);
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ------------------------------------*/
+/*HEADINGS*/
+/* ------------------------------------*/
+
+h1, h2, h3 {
+ 
+ 
+    font-weight: 300;
+    text-transform: uppercase;
+
+
+}
+
+h1 {
+       margin-top: 0;
+    margin-bottom: 30px; 
+    color: white;
+    font-size: 240%;
+     word-spacing: 4px;
+        letter-spacing: 1px;
+   
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+        letter-spacing: 1px;
+   
+}
+
+h2:after{
+    display: block;
+    height:2px;
+    background-color: #009432;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size:110%;
+    margin-bottom:15px;
+}
+
+.hero-text-box {
+
+    position: absolute;
+    width: 1140px;
+    top: 55%;
+    left: 52%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* ------------------------------------*/
+/*PARAGRAPHS*/
+/* ------------------------------------*/
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/* ------------------------------------*/
+/*BUTTONS*/
+/* ------------------------------------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.5s, border 0.5s, color 0.5s;
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
+
+}
+
+.btn-full:link,
+.btn-full:visited, 
+    input[type=submit] {
+    border: 1px solid #009432;
+    background-color: #009432;
+    color: white;
+    margin-right: 20px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #009432;
+    border: 1px solid #009432;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+
+    background-color: #004016;
+
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit] {
+    border: 1px solid #004016;
+
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    color: white;
+    border: 1px solid #004016;
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-black {display: none;
+  height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+margin-bottom: 20px;}
+
+/* main navi */
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+    
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0px;
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 100%;
+    border-bottom: 2px solid transparent;
+        -webkit-transition: border-bottom 0.4s;
+        transition: border-bottom 0.4s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+border-bottom: 10px solid #009432;
+    -webkit-transition: border-bottom 0.5s;
+    transition: border-bottom 0.5s;
+}
+
+/*mobile navi*/
+
+
+
+
+/* .sticky navi */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 10px 10px rgba(0, 148, 50, 0.67);
+    z-index: 9999;
+}
+
+.sticky .main-nav {
+
+    margin-top: 35px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 20px 0px;
+    color:#555;
+}
+
+.sticky .logo {display: none;}
+.sticky .logo-black { display: block;}
+
+/* ------------------------------------*/
+/*FEATURES*/
+/* ------------------------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 50px;
+}
+
+
+/* ------------------------------------*/
+/*MEALS*/
+/* ------------------------------------*/
+.section-meals {
+    padding: 0;
+}
+.meals-showcase {
+    list-style: none;
+    width:100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%; /* 4 X 25 = 100% */
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+   height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+        transition: opacity 0.5s, -webkit-transform 0.5s;
+        transition: transform 0.5s, opacity 0.5s;
+        transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.meal-photo img:hover {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+        opacity:1;
+}
+
+/* ------------------------------------*/
+/*HOW IT WORKS*/
+/* ------------------------------------*/
+
+.section-steps {
+    background-color: #dfffea;
+}
+
+.works-step:first-child {
+    text-align: right;
+    padding-right: 3%;
+     margin-top: 70px;
+    
+}
+
+.works-step:last-child {
+    padding-left: 2%;
+    margin-top: 70px;
+    
+}
+
+.btn-app:link,
+.btn-app:visited{
+    
+    border:0;
+}
+
+
+
+.app-screen {
+    width: 40%;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+/*similar to last child */
+.works-step:last-of-type {
+    margin-bottom: 80px;
+    
+}
+
+.works-step div{
+    color: #009432;
+    border: 2px solid #009432;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding:5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height:50px;
+    width: auto;
+    margin-right:10px;
+}
+
+/* ------------------------------------*/
+/*CITIES*/
+/* ------------------------------------*/
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    
+}
+
+.city-feature {
+    margin-bottom: 10px; 
+}
+
+
+/* ------------------------------------*/
+/*TESTIMONIALS*/
+/* ------------------------------------*/
+
+.section-testimonials {
+    
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.7)),to(rgba(0, 0, 0, 0.7))), url(img/back-customers.jpg);
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ------------------------------------*/
+/*SECRETS TO TEXT ALIGNMENT*/
+/* ------------------------------------*/
+
+/*width="40" height="20"style="line-height: 120%; vertical-align: middle; margin-top: -5px; margin-right: 10px;" */
+
+
+/* ------------------------------------*/
+/*SIGN UP*/
+/* ------------------------------------*/
+
+.section-plans {
+    background-color: #dfffea;
+}
+
+.plan-box {
+    background-color: white;
+    border-radius: 25px;
+    width:100%;
+    margin-left: 30%;
+    -webkit-box-shadow: 0 5px 5px #8b8787;
+    box-shadow: 0 5px 5px #8b8787
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #004016;
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #009432;
+    font-style:oblique;
+}
+
+.plan-box:first-child{
+    background-color:#ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size:80%; 
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+/* ------------------------------------*/
+/*CONTACT FORM*/
+/* ------------------------------------*/
+
+.contact-form {
+    
+    width:60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+     width:100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #004016;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox],
+input[type=textarea]{
+    margin: 10px 5x 10px 0;
+}
+
+*:focus {outline:none;}
+
+
+/* ------------------------------------*/
+/*FOOTER*/
+/* ------------------------------------*/
+
+footer{
+    background-color: #262525;
+    padding: 40px;
+    font-size: 100%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+    
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration:none;
+    border: 0;
+    color: #6dfa9d;
+    -webkit-transition: color 0.4s;
+    transition: color 0.4s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #009531;
+}
+
+.social-links li a:link,
+.social-links a:visited {
+    font-size: 180%
+}
+
+footer p {
+    color: #009432;
+    text-align: center;
+    font-size: 70%;
+    margin-top: 20px;
+}
+
+/* Scroll to top button */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #009432; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* Animation for hero class */
+.fade-out {
+	-webkit-animation: fade-out 5s ease-out both;
+	        animation: fade-out 5s ease-out both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-5-12 14:11:36
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-out
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.scale-in-center {
+	-webkit-animation: scale-in-center 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-5-12 14:14:48
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
